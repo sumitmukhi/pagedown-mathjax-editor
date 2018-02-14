@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css"> -->
+    <!-- <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <link href="bower_components/angular-pagedown/angular-pagedown.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">TextEdit.io</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <!-- Navigation -->
+                <div class="container">
+                    <div class="row" ng-controller="markdownController">
+                        <div class="col-md-12">
+                            <form>
+                                <div class="form-group">
+                                    <div class="input-field col s12">
+                                        <p class="help-text text-right">Use <a href="http://meta.math.stackexchange.com/questions/5020/tex-latex-mathjax-basic-tutorial-and-quick-reference" target="_BLANK">MathJax</a> to format equations. Use <a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">$\LaTeX$</a> to type formulae and <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a> to format text.</p>
+                                        <pagedown-editor content="source" ng-model="source" insert-image="insertImage()"></pagedown-editor>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="bower_components/materialize/dist/js/materialize.js"></script> -->
+    <!-- <script src="bower_components/angular/angular.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/pagedown/Markdown.Converter.js"></script>
+    <script src="bower_components/pagedown/Markdown.Sanitizer.js"></script>
+    <script src="bower_components/pagedown/Markdown.Extra.js"></script>
+    <script src="bower_components/pagedown/Markdown.Editor.js"></script>
+    <script type="text/javascript" src="bower_components/MathJax/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+    <script src="MJPDEditing.js"></script>
+    <script src="angular-pagedown.js"></script>
+    <script src="app.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ showProcessingMessages: false, tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }, TeX: { equationNumbers: {autoNumber: "AMS"} } });
+    </script>
+</body>
+
+</html>

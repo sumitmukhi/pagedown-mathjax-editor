@@ -1,0 +1,19 @@
+{
+  "name": "CodeTutorial-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andbet39/CodeTutorial-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-sanitize": "1.4.x",
+    "materialize": "latest",
+    "marked": "^0.3.12",
+    "angular-bootstrap": "^2.5.0",
+    "angular-pagedown": "^0.4.4",
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^5.0.6",
+    "MathJax": "^2.7.3"
+  }
+}
